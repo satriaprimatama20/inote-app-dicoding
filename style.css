@@ -405,7 +405,7 @@ a {
 aside {
   background: var(--main-color);
   position: fixed;
-  height: 100vh;
+  height: 100%;
   border-right: 2px solid var(--sidebar-light);
   display: flex;
   flex-direction: column;
@@ -576,11 +576,18 @@ section {
   }
 }
 
-.note-body>i.bi-bookmark-check-fill {
+.note-body>i.bi-bookmarks {
   color: var(--bg-dark-mode);
   cursor: pointer;
   transition: var(--transition);
   width: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.note-body>i.bi-bookmarks-fill {
+  cursor: pointer;
+  transition: var(--transition);  
+  font-size: 1.6rem;
 }
 
 .note-title {
