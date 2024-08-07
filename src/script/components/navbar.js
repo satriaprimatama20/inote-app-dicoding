@@ -4,48 +4,70 @@ class Navbar extends HTMLElement {
   constructor() {
     super();
 
-    this._shadowRoot = this.attachShadow({ mode: open });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
     this._style = document.createElement("style");
   }
 
   _updateStyle() {
     this._style.textContent = `
-      :host {
-        display: block;
-        width: 100%;
-        color: orange;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-      }
 
-      .nav {
+    :host {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+      :host >div>nav {
+        display: flex;
+        flex-direction: row
+        align-item: center;
+        justify-content: space-between;
+        }
+
+     :host >div>nav>ul{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
+        justify-content: start;
+        gap:20px;
         color: var(--main-color);
-        padding: 0;
-        margin: 0;
+        margin:25px;
+        position: end;
+        font-size: 1.3em;
       }
 
-      .nav>.title-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        row-gap: 500px;
+      
+      ul {
+          list-style: none;
+          display: flex;
+          gap: 10px;
+          margin: 0;
+          padding: 0;
+      }
+
+      li{
+        
         color: var(--main-color);
-        padding: 0;
-        gap: 26px;
         cursor: pointer;
-        font-size: 18px;
         transition: transform .3s;
+        font-weight: 500;
       }
 
-      .nav.tools {
+      input[type="radio"] {
+        /* Add if not using autoprefixer */
+        -webkit-appearance: none;
+        appearance: none;
+        }
+
+      
+
+      .tools {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: end;
+      margin: 20px
       }
 
       .nav>.tools {
@@ -64,8 +86,11 @@ class Navbar extends HTMLElement {
       }
 
       .hidden-input:checked+.clickable-text {
-        font-size: 1.5em;
-        /* Ubah ukuran sesuai kebutuhan Anda */
+        font-size: 1.2em;
+        font-weight: bold;
+        color: var(--active-color);
+        transform : var(--transition);
+
       }
     `;
   }
@@ -82,19 +107,20 @@ class Navbar extends HTMLElement {
     this._updateStyle();
 
     this._shadowRoot.appendChild(this._style);
-    this._shadowRoot.innerHTML = `
+    this._shadowRoot.innerHTML += `
         <div>
           <nav>
-            <div class="title-section">
-             <input type="radio" id="yourNotes" name="text" class="hidden-input">
-              <label for="yourNotes" class="clickable-text">Your Notes</label>
+            <ul>
+              <li><input type="radio" id="yourNotes" name="text" class="hidden-input">
+              <label for="yourNotes" class="clickable-text">MyNotes</label></li>
 
-              <input type="radio" id="archive" name="text" class="hidden-input">
-              <label for="archive" class="clickable-text">Archive</label>
-            </div>
+              <li><input type="radio" id="archive" name="text" class="hidden-input">
+              <label for="archive" class="clickable-text">Archive</label></li>
+
+              <li></li>           
+            </ul>
             <div class="tools">
-              <search-form></search-form>
-              </i>
+            <search-bar></search-bar>
             </div>
           </nav>
         </div>
@@ -102,4 +128,4 @@ class Navbar extends HTMLElement {
   }
 }
 
-customElements.define("navbar", Navbar);
+customElements.define("nav-bar", Navbar);

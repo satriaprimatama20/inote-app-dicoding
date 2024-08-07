@@ -46,10 +46,20 @@
     <title>iNotes</title>
   </head>
   <body>
-    <header>
-      <navbar></navbar>
-    </header>
     <main>
+      <header>
+        <nav-bar></nav-bar>
+      </header>
+      <article>
+        <section>
+          <blog-list></blog-list>
+          <!-- <div id="noteListContainer" class="note-list-container">
+            <div id="noteListItem" class="note-list-item">
+                <note-body></note-body>   
+          </div> -->
+        </section>
+      </article>
+
       <aside>
         <div class="inotes-bar">
           <img
@@ -59,7 +69,7 @@
           />
         </div>
         <div class="aside-tools create-button">
-          <p>New Note</p>
+          <p>NEW NOTE</p>
           <i class="bi bi-plus-circle-fill">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -99,13 +109,6 @@
           </div>
         </footer>
       </aside>
-      <section>
-        <div id="noteListContainer" class="note-list-container">
-          <blog-list></blog-list>
-          <!-- <div id="noteListItem" class="note-list-item">
-              <note-body></note-body>    -->
-        </div>
-      </section>
     </main>
   </body>
 </html>

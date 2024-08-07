@@ -1,3 +1,3 @@
 import "./navbar.js";
-import "./searchForm.js";
+import "./searchBar.js";
 import "./noteItem.js";
