@@ -1,7 +1,7 @@
 :root {
   --main-color: #9acd32;
   --sidebar-light: #c0c0c0e0;
-  --secondary-color: white;
+  --secondary-color: #ffffff;
   --text-color: white;
   --bg-light-mode: white;
   --bg-dark-mode: #070f2b;
@@ -317,44 +317,7 @@ img#searchFormButton:active {
 /* Start of Navbar */
 
 
-.navbar>nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--main-color);
-  padding: 0;
-  margin: 0;
-}
 
-.navbar>nav>.title-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  row-gap: 500px;
-  color: var(--main-color);
-  padding: 0;
-  gap: 26px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: transform .3s;
-}
-
-.hidden-input {
-  display: none;
-}
-
-.clickable-text {
-  cursor: pointer;
-  transition: font-size 0.3s;
-  font-size: 1em;
-}
-
-.hidden-input:checked+.clickable-text {
-  font-size: 1.5em;
-  /* Ubah ukuran sesuai kebutuhan Anda */
-}
 
 /* .navbar>nav>.title-section>h3.your-notes:hover, h3.archive:hover {
   transform: scale(1.1);
@@ -586,7 +549,7 @@ section {
 
 .note-body>i.bi-bookmarks-fill {
   cursor: pointer;
-  transition: var(--transition);  
+  transition: var(--transition);
   font-size: 1.6rem;
 }
 

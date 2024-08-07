@@ -1,12 +1,12 @@
 class Bookmarks extends HTMLElement {
   constructor() {
-      super();
-      this.attachShadow({ mode: 'open' });
-      this.render();
+    super();
+    this.attachShadow({ mode: "open" });
+    this.render();
   }
 
   render() {
-      this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = `
       <style>
           .bookmark-icon {
               font-size: 24px;
@@ -32,27 +32,21 @@ class Bookmarks extends HTMLElement {
   }
 }
 
-customElements.define('book-marks', Bookmarks);
+customElements.define("book-marks", Bookmarks);
 
 class NoteBody extends HTMLElement {
   constructor() {
-      super();
-      this.attachShadow({ mode: 'open' });
-      this.render();
+    super();
+    this.attachShadow({ mode: "open" });
+    this.render();
   }
 
   render() {
-      this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = `
       <style>
       .note-list-item {
       
-        padding: 10px;
-        margin: 10px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-      /* grid-template-rows: repeat(4, 25%); */
-        gap: 10px;
-        box-sizing: border-box;
+       
       }
       .card {
         font-family: "Inter", sans-serif;
@@ -196,4 +190,4 @@ class NoteBody extends HTMLElement {
   }
 }
 
-customElements.define('note-body', NoteBody);
+customElements.define("note-body", NoteBody);

@@ -9,81 +9,103 @@
       href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
 
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
 
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-straight/css/uicons-solid-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-thin-rounded/css/uicons-thin-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-    <link href="style.css" rel="stylesheet" />
-    <script src="script.js"></script>
-    <script src="navbar.js" type="module"></script>
-    <script src="searchForm.js" type="module"></script>
-    <script src="noteBody.js" type="module" ></script>
-    
-    <title>Satria Notes App - DBS Code Camp</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.2/uicons-thin-rounded/css/uicons-thin-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <!-- Own Styles -->
+    <link rel="icon" href="/src/icons/inotes-icon.png" sizes="512x512" />
+    <link href="./src/styles/style.css" rel="stylesheet" />
+    <script type="module" src="/src/app.js"></script>
+    <title>iNotes</title>
   </head>
   <body>
+    <header>
+      <navbar></navbar>
+    </header>
     <main>
       <aside>
         <div class="inotes-bar">
-          <i class="fi fi-rs-journal"></i>
-          <h1 class="brand-name inter-bold">iNotes</h1>
+          <img
+            width="150px"
+            src="./src/icons/inotes-brand-bg-green.png"
+            alt="inotes brand name"
+          />
         </div>
         <div class="aside-tools create-button">
           <p>New Note</p>
           <i class="bi bi-plus-circle-fill">
-            <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2.5em"
+              height="2.5em"
+              class="bi bi-plus-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"
+              />
             </svg>
           </i>
-  
+
           <!-- <i class="fi fi-sr-note-sticky color-note-ori" ></i>
           <i class="fi fi-sr-note-sticky color-orange" ></i>
           <i class="fi fi-sr-note-sticky color-green" ></i>
           <i class="fi fi-sr-note-sticky color-blue" ></i>
           <i class="fi fi-sr-note-sticky color-purple" ></i> -->
         </div>
-        
-        
         <footer>
           <ul>
             <li><i class="fi fi-ss-moon-stars"></i></li>
             <li>
-            <i class="fi fi-sr-sun"></i></li>
+              <i class="fi fi-sr-sun"></i>
+            </li>
           </ul>
           <div class="inter-semibold container">
             <div class="main-footer">
-              <p>Developed by:<br> Satria &copy; 2024
-              <br>
-              Supported By:<br>Dicoding - DBSF Coding Camp 2024</p>
+              <p>
+                Developed by:<br />
+                Satria &copy; 2024
+                <br />
+                Supported By:<br />Dicoding - DBSF Coding Camp 2024
+              </p>
             </div>
           </div>
         </footer>
       </aside>
-      <section> 
-        <header>
-            <navbar-component></navbar-component>
-        </header>
-        <div id="noteListContainer" class="note-list-container ">
-          <div id="noteListItem" class="note-list-item">
-              <note-body></note-body>
-              <note-body></note-body>
-              <note-body></note-body>
-              <note-body></note-body>
-              <note-body></note-body>
-              <note-body></note-body>
-              <note-body></note-body>
-              <note-body></note-body>
-              <note-body></note-body>
-              <note-body></note-body>
-            
+      <section>
+        <div id="noteListContainer" class="note-list-container">
+          <blog-list></blog-list>
+          <!-- <div id="noteListItem" class="note-list-item">
+              <note-body></note-body>    -->
         </div>
       </section>
     </main>
   </body>
-  
 </html>
