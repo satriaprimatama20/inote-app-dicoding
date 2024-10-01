@@ -1,4 +1,5 @@
-Note - Your Personal Book Note Application
+-- iNote - Your Personal Book Note Application --
+
 iNote is a versatile and intuitive book note-taking application designed to help users easily create, manage, and organize notes related to their reading. Whether you're keeping track of book summaries, key insights, or to-do lists, iNote provides a seamless experience for managing all your important notes in one place.
 
 Key Features:
